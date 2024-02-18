@@ -7,3 +7,6 @@ Image classification for Flower102 dataset with EfficientNet_B2_v2_m pretrained 
 
 
 Check out the demo of the app: https://huggingface.co/spaces/AbdurrahimNas/Flower102
+
+
+📌 THERE IS GOING TO BE AN INTERFACE!!! 📌

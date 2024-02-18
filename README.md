@@ -1,5 +1,6 @@
 # Flower102
 📌 THERE IS GOING TO BE AN INTERFACE!!! 📌
+
 📌Consider using different pretrained model for faster predictions and less memory usage if deployment would be in a mobile or small device.📌
 
 Image classification for Flower102 dataset with EfficientNet_B2_v2_m pretrained feature extraction model. It classifies all classes with the whole dataset.

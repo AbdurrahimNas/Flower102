@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <div class="container">
+            <center><h1>Flower102</h1></center>
+        </div>
+        <table class="table">
+            <tbody>
+                <tr >
+                    <td colspan="6">
+                        <div class="container">
+                        <form method="post" enctype="multipart/form-data">
+                            {% csrf_token %}  
+                            {{flowerform.as_p}}
+                            <button type="submit" class="btn btn-success mt-3">Predict</button>
+                        </form>
+                        </div>
+                    </td>
+ 
+                    <td colspan="6">
+                        <div class="container">
+                            <p><strong>Prediction:</strong> {{prediction}}</p>
+                            
+                        </div>
+                    </td>
+                </tr>
+                <tr><td colspan="4"><h3>Flowers That Model Can Predict</h3></td></tr>
+                {% for label in flower_labels%}
+                <tr>
+                    {% for i in nums%}
+                    
+                        <td colspan="3">{{label}}</td>
+                    
+                    {%endfor%}
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+
+    </body>
+</html>
